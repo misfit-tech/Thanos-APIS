@@ -267,10 +267,9 @@ Product Update API
 ### Purchase Order Create
 ___
 
-* **URL :** `BASE_URL + /api/v1/wh_purchase_orders`
-
+* **URL :** `BASE_URL + /api/v1/purchase_orders`
 * **Method :** `POST`
-
+* **Header :** `Authorization: auth-token`
 * **URL Params :**
 
 ```json
@@ -293,7 +292,7 @@ ___
    "success": true,
    "status_code": 201,
    "message": "Successfully purchase order created",
-   "data": []
+   "data": {}
 }
 ```
 * **Error Response**
@@ -307,5 +306,42 @@ ___
    "data": {}
 }
 ```
+### Assign Product to Supplier
+___
 
+* **URL :** `BASE_URL + /api/v1/suppliers/:id/suppliers_variants`
+* **Method :** `POST`
+* **Header :** `Authorization: auth-token`
+* **URL Params :**
 
+```json
+{
+   "suppliers_variants":[
+         "variant_id": 1, //integer
+         "supplier_price": 1050, //decimal
+   ]
+}
+
+```
+* **Success Response**
+ * **Code :**`201`
+ * **Content :**
+```json
+{
+   "success": true,
+   "status_code": 201,
+   "message": "Successfully created supplier variant",
+   "data": {}
+}
+```
+* **Error Response**
+ * **Code :**`422`
+ * **Content :**
+```json
+{
+   "success": false,
+   "status": 422,
+   "message": "Unable to create supplier variant",
+   "data": {}
+}
+```
