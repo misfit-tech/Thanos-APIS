@@ -159,7 +159,7 @@ Product Create API
 
 Product Update API
 
-* **URL**: `{BASE_URL}/api/v1/products`
+* **URL**: `{BASE_URL}/api/v1/products/:id`
 
 * **Method:** `PUT`
 
