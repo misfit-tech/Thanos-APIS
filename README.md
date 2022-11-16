@@ -264,5 +264,48 @@ Product Update API
 }
 
 ```
+### Purchase Order Create
+___
+
+* **URL :** `BASE_URL + /api/v1/wh_purchase_orders`
+
+* **Method :** `POST`
+
+* **URL Params :**
+
+```json
+{
+   "wh_order_params": {
+      "variants":[
+         "variant_id": 1, //integer
+         "supplier_id": 10, //integer
+         "quantity": 100 //integer
+      ]
+   }
+}
+
+```
+* **Success Response**
+ * **Code :**`201`
+ * **Content :**
+```json
+{
+   "success": true,
+   "status_code": 201,
+   "message": "Successfully purchase order created",
+   "data": []
+}
+```
+* **Error Response**
+ * **Code :**`422`
+ * **Content :**
+```json
+{
+   "success": false,
+   "status": 422,
+   "message": "Unable to create purchase order",
+   "data": {}
+}
+```
 
 
