@@ -274,11 +274,18 @@ ___
 
 ```json
 {
-   "wh_order_params": {
+   "purchase_order": {
       "variants":[
-         "variant_id": 1, //integer
-         "supplier_id": 10, //integer
-         "quantity": 100 //integer
+         {
+            "variant_id": 1, //integer
+            "supplier_id": 10, //integer
+            "quantity": 100 //integer
+         },
+         {
+            "variant_id": 123, //integer
+            "supplier_id": 50, //integer
+            "quantity": 10 //integer
+         }
       ]
    }
 }
@@ -301,7 +308,7 @@ ___
 ```json
 {
    "success": false,
-   "status": 422,
+   "status_code": 422,
    "message": "Unable to create purchase order",
    "data": {}
 }
@@ -309,7 +316,7 @@ ___
 ### Assign Product to Supplier
 ___
 
-* **URL :** `BASE_URL + /api/v1/suppliers/:id/suppliers_variants`
+* **URL :** `BASE_URL + /api/v1/suppliers/:id/assign_products`
 * **Method :** `POST`
 * **Header :** `Authorization: auth-token`
 * **URL Params :**
@@ -317,8 +324,14 @@ ___
 ```json
 {
    "suppliers_variants":[
-         "variant_id": 1, //integer
-         "supplier_price": 1050, //decimal
+        {
+          "variant_id": 1, //integer
+          "supplier_price": 1050, //decimal
+        },
+        {
+          "variant_id": 1234, //integer
+          "supplier_price": 130, //decimal
+        }
    ]
 }
 
@@ -340,7 +353,7 @@ ___
 ```json
 {
    "success": false,
-   "status": 422,
+   "status_code": 422,
    "message": "Unable to create supplier variant",
    "data": {}
 }
