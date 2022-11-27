@@ -278,23 +278,25 @@ ___
 ### Assign Product to Supplier
 ___
 
-* **URL :** `BASE_URL + /api/v1/suppliers/:id/assign_products`
+* **URL :** `BASE_URL + /api/v1/suppliers/assign_products`
 * **Method :** `POST`
 * **Header :** `Authorization: auth-token`
 * **URL Params :**
 
 ```json
 {
-   "suppliers_variants":[
-        {
-          "variant_id": 1, //integer
-          "supplier_price": 1050, //decimal
-        },
-        {
-          "variant_id": 1234, //integer
-          "supplier_price": 130, //decimal
-        }
-   ]
+    "supplier_unique_id": "f0d2301e-4705-4d66-8a73-f73023909d63",
+    "suppliers_variants": [
+    {
+        "variant_unique_id": "a1104fc0-f4e4-4b19-82ea-d84b2a3824ae",
+        "supplier_price": 50
+    },
+    
+    {
+        "variant_unique_id": "a1104fc0-f4e4-4b19-82ea-d84b2a38",
+        "supplier_price": 60
+    }
+]
 }
 
 ```
