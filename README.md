@@ -98,7 +98,17 @@ Product Create API
 {
    "success": true,
    "status_code": 201,
-   "message": "Product Created Successfully"
+   "message": "Product Created Successfully",
+   "data": {
+        "product_id": 4051,
+        "unique_id": "d965c19f-99e8-4586-aa76-d8ba1d888d8c",
+        "variants": [
+            {
+                "variant_id": 3239,
+                "unique_id": "84c2b5e5-b07e-416f-abd4-7fc4326ca5a9"
+            }
+        ]
+    }
 }
 
 ```
