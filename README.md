@@ -130,7 +130,7 @@ Product Create API
 
 Product Update API
 
-* **URL**: `{BASE_URL}/api/v1/products/:id`
+* **URL**: `{BASE_URL}/api/v1/products/:unique_id`
 
 * **Method:** `PUT`
 
@@ -141,24 +141,12 @@ Product Update API
 ```
 {
     "product":{
-        "unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
         "title": "Product Title",
         "description":"Product Description",
-        "sku_type":1,
         "company":"ABC Company",
         "product_type": "Trending",
         "brand_unique_id":"97263fb6-5960-4eb2-aac1-f36bc2437026",
-        "leaf_category_unique_id":"62d2d56b-e205-48df-ba33-4452757e3c0e",
-        "attribute_set_unique_id":"46fbd572-0bee-485f-9e76-3bd7be8067b1",
-        "variants_attributes":[
-            {
-                "unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
-                "price_consumer":500,
-                "consumer_discount":50,
-                "product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
-            }
-            
-        ]
+        "leaf_category_unique_id":"62d2d56b-e205-48df-ba33-4452757e3c0e"
         
     }
              
