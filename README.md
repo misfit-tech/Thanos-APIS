@@ -238,3 +238,224 @@ ___
    "data": {}
 }
 ```
+
+
+Product Delete API
+
+* **URL**: `{BASE_URL}/api/v1/products/:unique_id`
+
+* **Method:** `DELETE`
+
+*  **Headers:**
+	 `Authorization: token`
+
+```
+
+* **Success Response:**
+* **Code:** `200`
+  	* **Content:**
+
+```json
+{
+   "success": true,
+   "status_code": 200,
+   "message": "Product Deleted Successfully"
+}
+
+```
+
+
+* **Error Response:**
+* **Code:** `404`	
+* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 404,
+   "message": "Product not found",
+   "data": {}
+}
+```
+* **Code:** `422`	
+* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 422,
+   "message": "Unable to delete product due to, {{error_message}}",
+   "data": {}
+}
+
+```
+
+Variant Add API
+
+* **URL**: `{BASE_URL}/api/v1/variants`
+
+* **Method:** `POST`
+
+*  **Headers:**
+	 `Authorization: token`
+	 
+*  **Request Parameters:**
+```
+{
+    "variant":{
+        "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
+	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
+	"price_consumer":500,
+	"consumer_discount":50,
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
+    }
+             
+}
+
+```
+
+* **Success Response:**
+* **Code:** `200`
+  	* **Content:**
+
+```json
+{
+   "success": true,
+   "status_code": 201,
+   "message": "Variant Added Successfully",
+   "data": {
+        "product_id": 4051,
+        "product_unique_id": "d965c19f-99e8-4586-aa76-d8ba1d888d8c",
+        "variants": [
+            {
+                "variant_id": 3239,
+                "unique_id": "84c2b5e5-b07e-416f-abd4-7fc4326ca5a9"
+            }
+        ]
+    }
+}
+
+```
+
+
+* **Error Response:**
+* **Code:** `422`
+  	* **Unable to create product:**
+  	* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 406,
+   "message": "Unable to add variant due to, {{error_message}}",
+   "data": []
+}
+
+```
+
+Variant Update API
+
+* **URL**: `{BASE_URL}/api/v1/variants/{{variant_unique_id}}`
+
+* **Method:** `PUT`
+
+*  **Headers:**
+	 `Authorization: token`
+	 
+*  **Request Parameters:**
+```
+{
+    "variant":{
+        "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
+	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
+	"price_consumer":500,
+	"consumer_discount":50,
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
+    }
+             
+}
+
+```
+
+* **Success Response:**
+* **Code:** `200`
+  	* **Content:**
+
+```json
+{
+   "success": true,
+   "status_code": 201,
+   "message": "Variant Added Successfully",
+   "data": {
+        "product_id": 4051,
+        "product_unique_id": "d965c19f-99e8-4586-aa76-d8ba1d888d8c",
+        "variants": [
+            {
+                "variant_id": 3239,
+                "unique_id": "84c2b5e5-b07e-416f-abd4-7fc4326ca5a9"
+            }
+        ]
+    }
+}
+
+```
+
+
+* **Error Response:**
+* **Code:** `422`
+  	* **Unable to create product:**
+  	* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 406,
+   "message": "Unable to update variant due to, {{error_message}}",
+   "data": []
+}
+
+```
+
+Variant Delete API
+
+* **URL**: `{BASE_URL}/api/v1/variants/:unique_id`
+
+* **Method:** `DELETE`
+
+*  **Headers:**
+	 `Authorization: token`
+
+```
+
+* **Success Response:**
+* **Code:** `200`
+  	* **Content:**
+
+```json
+{
+   "success": true,
+   "status_code": 200,
+   "message": "Variant Deleted Successfully"
+}
+
+```
+
+
+* **Error Response:**
+* **Code:** `404`	
+* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 404,
+   "message": "Variant not found",
+   "data": {}
+}
+```
+* **Code:** `422`	
+* **Content:**
+```json
+{
+   "success": false,
+   "status_code": 422,
+   "message": "Unable to delete variant due to, {{error_message}}",
+   "data": {}
+}
+
+```
