@@ -352,7 +352,7 @@ Variant Add API
 
 Variant Update API
 
-* **URL**: `{BASE_URL}/api/v1/variants/{{variant_unique_id}}`
+* **URL**: `{BASE_URL}/api/v1/variants/{{unique_id}}`
 
 * **Method:** `PUT`
 
@@ -364,7 +364,6 @@ Variant Update API
 {
     "variant":{
         "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
-	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
 	"price_consumer":500,
 	"consumer_discount":50,
 	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
