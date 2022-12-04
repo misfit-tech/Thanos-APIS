@@ -366,6 +366,7 @@ Variant Update API
         "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
 	"price_consumer":500,
 	"consumer_discount":50,
+	"sku": "sku-abc-xyz",
 	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
     }
              
