@@ -305,7 +305,7 @@ Variant Add API
 	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
 	"price_consumer":500,
 	"consumer_discount":50,
-	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
     }
              
 }
@@ -367,7 +367,7 @@ Variant Update API
 	"price_consumer":500,
 	"consumer_discount":50,
 	"sku": "sku-abc-xyz",
-	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
     }
              
 }
