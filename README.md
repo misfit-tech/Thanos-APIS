@@ -363,10 +363,8 @@ Variant Update API
 ```
 {
     "variant":{
-        "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
 	"price_consumer":500,
 	"consumer_discount":50,
-	"sku": "sku-abc-xyz",
 	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
     }
              
@@ -384,14 +382,12 @@ Variant Update API
    "status_code": 201,
    "message": "Variant Added Successfully",
    "data": {
-        "product_id": 4051,
-        "product_unique_id": "d965c19f-99e8-4586-aa76-d8ba1d888d8c",
-        "variants": [
-            {
-                "variant_id": 3239,
-                "unique_id": "84c2b5e5-b07e-416f-abd4-7fc4326ca5a9"
-            }
-        ]
+         "variant_id": 3245,
+        "variant_unique_id": "498f9932-0d74-401c-a5fd-fee46bdbad59",
+        "product_id": 4041,
+        "product_unique_id": "9742fc4e-3c41-42e6-8fe2-00ef9b50788c",
+        "consumer_discount": "50.0",
+        "price_consumer": "500.0"
     }
 }
 
