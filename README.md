@@ -67,8 +67,10 @@ Product Create API
     "product":{
         "unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
         "title": "Product Title",
+	"bn_title": "Product Title Bangla",
         "description":"Product Description",
         "sku_type":1,
+	"sku":"product-title-sku",
         "company":"ABC Company",
         "product_type": "Trending",
         "brand_unique_id":"97263fb6-5960-4eb2-aac1-f36bc2437026",
