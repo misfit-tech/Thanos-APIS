@@ -1,7 +1,7 @@
 # Thanos-APIS
 BASE_URL(development) = "http://api-v2.shopoth.shop/3ps/thanos",
 BASE_URL(sandbox) = "Please request for base url when you need",
-BASE_URL(live) = "Please request for base url when you need"
+BASE_URL(live) = "https://api.shopoth.com/3ps/thanos"
 
 
 Authentication API
