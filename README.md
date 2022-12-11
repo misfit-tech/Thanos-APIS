@@ -70,7 +70,6 @@ Product Create API
 	"bn_title": "Product Title Bangla",
         "description":"Product Description",
         "sku_type":1,
-	"sku":"product-title-sku",
         "company":"ABC Company",
         "product_type": "Trending",
         "brand_unique_id":"97263fb6-5960-4eb2-aac1-f36bc2437026",
@@ -78,6 +77,7 @@ Product Create API
         "attribute_set_unique_id":"46fbd572-0bee-485f-9e76-3bd7be8067b1",
         "variants_attributes":[
             {
+	    	"sku":"product-title-sku",
                 "unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
                 "price_consumer":500,
                 "consumer_discount":50,
@@ -303,6 +303,7 @@ Variant Add API
 ```
 {
     "variant":{
+   	 "sku":"product-title-sku",
         "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
 	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
 	"price_consumer":500,
