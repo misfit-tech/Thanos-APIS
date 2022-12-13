@@ -75,13 +75,17 @@ Product Create API
         "brand_unique_id":"97263fb6-5960-4eb2-aac1-f36bc2437026",
         "leaf_category_unique_id":"62d2d56b-e205-48df-ba33-4452757e3c0e",
         "attribute_set_unique_id":"46fbd572-0bee-485f-9e76-3bd7be8067b1",
+	"business_type":"b2b" // values ['b2c', 'b2b', 'both']
         "variants_attributes":[
             {
 	    	"sku":"product-title-sku",
                 "unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
                 "price_consumer":500,
                 "consumer_discount":50,
-                "product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
+                "product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"],
+		"b2b_discount_type": "fixed", // values ["fixed", 'percentage']
+                "b2b_price": 200,
+                "b2b_discount": 20
             }
             
         ]
@@ -148,8 +152,8 @@ Product Update API
         "company":"ABC Company",
         "product_type": "Trending",
         "brand_unique_id":"97263fb6-5960-4eb2-aac1-f36bc2437026",
-        "leaf_category_unique_id":"62d2d56b-e205-48df-ba33-4452757e3c0e"
-        
+        "leaf_category_unique_id":"62d2d56b-e205-48df-ba33-4452757e3c0e",
+	"business_type":"b2b"
     }
              
 }
@@ -303,12 +307,15 @@ Variant Add API
 ```
 {
     "variant":{
-   	 "sku":"product-title-sku",
+   	"sku":"product-title-sku",
         "product_unique_id":  "f0d2301e-4705-4d66-8a73-f73023909d63",
 	"variant_unique_id":"84c2b5e5-b07e-416f-abd4-7fc4326ca5a9",
 	"price_consumer":500,
 	"consumer_discount":50,
-	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"],
+	"b2b_discount_type": "fixed", // values ["fixed", 'percentage']
+	"b2b_price": 200,
+	"b2b_discount": 20
     }
              
 }
@@ -368,7 +375,10 @@ Variant Update API
     "variant":{
 	"price_consumer":500,
 	"consumer_discount":50,
-	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"]
+	"product_attribute_value_unique_ids":["0607527a-01eb-4540-8c9b-f31b55e4841f"],
+	"b2b_discount_type": "fixed", // values ["fixed", 'percentage']
+	"b2b_price": 200,
+	"b2b_discount": 20
     }
              
 }
@@ -383,7 +393,7 @@ Variant Update API
 {
    "success": true,
    "status_code": 201,
-   "message": "Variant Added Successfully",
+   "message": "Variant Updated Successfully",
    "data": {
          "variant_id": 3245,
         "variant_unique_id": "498f9932-0d74-401c-a5fd-fee46bdbad59",
