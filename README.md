@@ -15,7 +15,7 @@ Authentication API
 *  **Request Parameters:**
 ```
  {
-    "username": "shopoth@gmail.com",
+    "username": "team_thanos@shopoth.net",
     "password": "123456"
 }
 ```
